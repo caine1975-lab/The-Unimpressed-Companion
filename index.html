@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tiny app that delivers sarcastic roasts to keep you honest about procrastination.">
+    <title>The Unimpressed Companion</title>
+    <!-- Official Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4 font-sans">
+
+    <main class="max-w-md w-full bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl text-center space-y-6">
+        
+        <!-- Avatar / Character Visual -->
+        <div class="relative w-32 h-32 mx-auto bg-slate-800 rounded-full flex items-center justify-center border-2 border-slate-700 shadow-inner">
+            <span role="img" aria-label="unimpressed face" class="text-5xl">😒</span>
+            <div class="absolute bottom-1 right-2 w-4 h-4 bg-red-500 rounded-full border-2 border-slate-900 animate-pulse" title="Judging You"></div>
+        </div>
+
+        <!-- Header -->
+        <div>
+            <h1 class="text-xl font-bold tracking-tight text-slate-100">The Companion</h1>
+            <p class="text-xs text-slate-400 mt-1">Currently monitoring your poor life choices.</p>
+        </div>
+
+        <!-- Dialogue Box -->
+        <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl min-h-[90px] flex items-center justify-center">
+            <p id="roast-text" class="text-sm text-slate-300 italic" aria-live="polite">"Oh look, you actually opened the app. What groundbreaking productivity disaster are we avoiding right now?"</p>
+        </div>
+
+        <!-- Interactive Buttons -->
+        <div class="space-y-3">
+            <button id="btn-generate" type="button" class="w-full bg-slate-800 hover:bg-slate-700 active:scale-95 transition text-slate-200 font-medium py-2.5 px-4 rounded-xl text-sm border border-slate-700 cursor-pointer">
+                Demand Another Insult
+            </button>
+            
+            <button id="btn-notify" type="button" class="w-full bg-red-950/40 hover:bg-red-900/40 active:scale-95 transition text-red-300 font-medium py-2.5 px-4 rounded-xl text-sm border border-red-900/50 cursor-pointer">
+                Enable Background Stalking (Notifications)
+            </button>
+        </div>
+
+        <!-- Tip Jar / Gag Link -->
+        <div class="pt-2 border-t border-slate-800/60">
+            <a href="#" id="tip-link" class="text-xs text-slate-500 hover:text-slate-400 underline">
+                Bribe the developer to make him stop ($1)
+            </a>
+        </div>
+
+    </main>
+
+    <!-- External JavaScript File -->
+    <script src="improvements.js"></script>
+</body>
+</html>
